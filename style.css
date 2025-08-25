@@ -73,22 +73,7 @@ html { scroll-behavior: smooth; }
 
 @media(max-width:1024px){ .gi-grid-4{ grid-template-columns:repeat(2,1fr)} .gi-grid-3{ grid-template-columns:repeat(2,1fr)} }
 @media(max-width:768px){ .gi-footer .gi-grid-4 {grid-template-columns: repeat(2,1fr);}}
-@media(max-width:640px){ .gi-grid-3,.gi-grid-2,.gi-grid-1{ grid-template-columns:1fr } .gi-grid-4{grid-template-columns:repeat(2,1fr)} .gi-footer .gi-grid-4 {grid-template-columns: 1fr;}}
-
-.gi-card--horizontal {
-    display: flex;
-    align-items: center;
-    padding: 0;
-    gap: 2rem;
-}
-.gi-card--horizontal img {
-    width: 250px;
-    height: 100%;
-    flex-shrink: 0;
-}
-.gi-card--horizontal .gi-card-content {
-    padding: 2rem;
-}
+@media(max-width:640px){ .gi-grid-4, .gi-grid-3, .gi-grid-2, .gi-grid-1{ grid-template-columns:1fr } .gi-footer .gi-grid-4 {grid-template-columns: 1fr;}}
 
 .gi-socials {
     display: flex;
