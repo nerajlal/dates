@@ -148,6 +148,34 @@ html { scroll-behavior: smooth; }
   .gi-journey__dot{ left:16px; }
 }
 
+/* ====== Feature Cards ====== */
+.gi-feature-card {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  background: var(--bg-main);
+  border-radius: var(--radius);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--shadow);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.gi-feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+.gi-feature-card__icon {
+  color: var(--brand-1);
+  margin-bottom: 1rem;
+}
+.gi-feature-card__title {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ====== Utility Classes ====== */
+.pb-0 {
+  padding-bottom: 0 !important;
+}
+
 /* ====== Product Slider ====== */
 .gi-product-grid {
   display: grid;
