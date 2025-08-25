@@ -172,9 +172,8 @@ html { scroll-behavior: smooth; }
 }
 
 /* ====== Utility Classes ====== */
-.pb-0 {
-  padding-bottom: 0 !important;
-}
+.pb-0 { padding-bottom: 0 !important; }
+.pt-0 { padding-top: 0 !important; }
 
 /* ====== Product Slider ====== */
 .gi-product-grid {
@@ -188,10 +187,13 @@ html { scroll-behavior: smooth; }
   margin: auto;
 }
 .gi-product-item {
-  display: contents; /* Allows us to use the grid layout of the parent */
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
 }
 .gi-product-item__img {
-  width: 100%;
+  width: 50%;
+  flex-shrink: 0;
   border-radius: var(--radius);
   box-shadow: var(--shadow-lg);
 }
@@ -215,4 +217,39 @@ html { scroll-behavior: smooth; }
 }
 .gi-product-slider .swiper-pagination-bullet-active {
   background: var(--brand-1);
+}
+
+/* ====== Review Cards ====== */
+.gi-review-card {
+  background: var(--bg-main);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  padding: 2rem;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+.gi-review-card__stars {
+  color: var(--accent-1);
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+.gi-review-card blockquote {
+  font-style: italic;
+  color: var(--text-muted);
+  margin: 0 0 1rem;
+  border: 0;
+  padding: 0;
+}
+.gi-review-card cite {
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+@media(max-width:768px) {
+  .gi-product-grid {
+    grid-template-columns: 1fr;
+  }
+  .gi-product-item:nth-child(even) .gi-product-item__img {
+    order: 0;
+  }
 }
