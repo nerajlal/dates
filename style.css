@@ -30,49 +30,6 @@ a{ color: var(--brand-1); text-decoration: none; transition: color .2s ease; }
 a:hover{ color: var(--brand-2); }
 html { scroll-behavior: smooth; }
 
-/* ====== Header & Nav ====== */
-.gi-header {
-  background: rgba(255,255,255,.8);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--card-border);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  transition: box-shadow .2s ease;
-}
-.gi-header.scrolled { box-shadow: var(--shadow); }
-.gi-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 70px;
-}
-.gi-nav__logo {
-  font-weight: 700;
-  font-size: 24px;
-  color: var(--text-main);
-}
-.gi-nav__logo:hover { color: var(--text-main); }
-.gi-nav__links {
-  display: flex;
-  gap: 24px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.gi-nav__links a {
-  color: var(--text-muted);
-  font-weight: 500;
-  font-size: 16px;
-  padding: 8px 0;
-  border-bottom: 2px solid transparent;
-  transition: all .2s ease;
-}
-.gi-nav__links a:hover {
-  color: var(--text-main);
-  border-bottom-color: var(--brand-1);
-}
 
 /* ====== Sections & Containers ====== */
 .gi-section{ position:relative; padding: clamp(48px,6vw,90px) 0; }
@@ -189,4 +146,45 @@ html { scroll-behavior: smooth; }
   .gi-journey__item{ grid-template-columns:1fr; }
   .gi-journey__line{ left:24px; }
   .gi-journey__dot{ left:16px; }
+}
+
+/* ====== Product Slider ====== */
+.gi-product-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+.gi-product-grid--single {
+  max-width: 80%;
+  margin: auto;
+}
+.gi-product-item {
+  display: contents; /* Allows us to use the grid layout of the parent */
+}
+.gi-product-item__img {
+  width: 100%;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+}
+.gi-product-item__text {
+  text-align: left;
+}
+.gi-product-item__text h4 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-main);
+}
+.gi-product-item__text p {
+  color: var(--text-muted);
+}
+.gi-product-item:nth-child(even) .gi-product-item__img {
+  order: 2;
+}
+.gi-product-slider .swiper-button-next,
+.gi-product-slider .swiper-button-prev {
+  color: var(--brand-1);
+}
+.gi-product-slider .swiper-pagination-bullet-active {
+  background: var(--brand-1);
 }
