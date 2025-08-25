@@ -147,7 +147,7 @@ html { scroll-behavior: smooth; }
 /* ====== Feature Cards ====== */
 .gi-feature-card {
   text-align: center;
-  padding: 2rem 1.5rem;
+  padding: 1.5rem;
   background: var(--bg-main);
   border-radius: var(--radius);
   border: 1px solid var(--card-border);
@@ -163,7 +163,7 @@ html { scroll-behavior: smooth; }
   margin-bottom: 1rem;
 }
 .gi-feature-card__title {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   margin-bottom: 0.5rem;
 }
 
