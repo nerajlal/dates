@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Goodway International</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 </head>
 <body>
 
@@ -49,17 +48,12 @@
 <section id="services" class="gi-section reveal pt-0">
   <div class="gi-container">
     <h3 class="gi-chip gi-chip--sa gi-underline">Our Products</h3>
-    <div class="swiper gi-sa-slider">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="http://goodwayinternational.com/wp-content/uploads/2025/08/Untitled-design-34-2.png" alt="Saudi Dates 1"></div>
-        <div class="swiper-slide"><img src="http://goodwayinternational.com/wp-content/uploads/2025/08/Untitled-design-35-2.png" alt="Saudi Dates 2"></div>
-        <div class="swiper-slide"><img src="http://goodwayinternational.com/wp-content/uploads/2025/08/Untitled-design-36-2.png" alt="Saudi Dates 3"></div>
-        <div class="swiper-slide"><img src="http://goodwayinternational.com/wp-content/uploads/2025/08/Untitled-design-37-1.png" alt="Saudi Dates 4"></div>
-        <div class="swiper-slide"><img src="http://goodwayinternational.com/wp-content/uploads/2025/08/ChatGPT-Image-Aug-23-2025-05_49_34-PM-2.png" alt="Saudi Dates 5"></div>
-      </div>
-      <div class="swiper-pagination"></div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
+    <div class="gi-grid gi-grid-3">
+        <img class="gi-product-image" src="http://goodwayinternational.com/wp-content/uploads/2025/08/Untitled-design-34-2.png" alt="Saudi Dates 1">
+        <img class="gi-product-image" src="http://goodwayinternational.com/wp-content/uploads/2025/08/Untitled-design-35-2.png" alt="Saudi Dates 2">
+        <img class="gi-product-image" src="http://goodwayinternational.com/wp-content/uploads/2025/08/Untitled-design-36-2.png" alt="Saudi Dates 3">
+        <img class="gi-product-image" src="http://goodwayinternational.com/wp-content/uploads/2025/08/Untitled-design-37-1.png" alt="Saudi Dates 4">
+        <img class="gi-product-image" src="http://goodwayinternational.com/wp-content/uploads/2025/08/ChatGPT-Image-Aug-23-2025-05_49_34-PM-2.png" alt="Saudi Dates 5">
     </div>
   </div>
 </section>
@@ -252,25 +246,5 @@
   document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
 })();
 </script>
-<script>
-(function(){
-  if (!window.Swiper) return;
-  new Swiper('.gi-sa-slider', {
-    loop: true,
-    autoplay: { delay: 3000, disableOnInteraction: false },
-    speed: 500,
-    spaceBetween: 24,
-    slidesPerView: 1,
-    pagination: { el: '.swiper-pagination', clickable: true },
-    navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
-    breakpoints: {
-      900: {
-        slidesPerView: 2
-      }
-    }
-  });
-})();
-</script>
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </body>
 </html>
