@@ -114,13 +114,13 @@ html { scroll-behavior: smooth; }
 }
 
 /* ====== Footer ====== */
-.gi-footer{ background: var(--bg-alt); border-top:1px solid var(--card-border); }
-.gi-footer__top{ padding: clamp(28px,4vw,54px) 24px; }
-.gi-footer h4{ color: var(--text-main); margin:0 0 10px; font-size:18px; }
+.gi-footer{ background: var(--text-main); border-top:1px solid var(--card-border); color: var(--bg-alt); }
+.gi-footer__top{ padding: clamp(48px,6vw,90px) 24px; }
+.gi-footer h4{ color: var(--bg-main); margin:0 0 10px; font-size:18px; }
 .gi-footer p, .gi-footer a, .gi-footer li{ color: var(--text-muted); }
 .gi-footer a:hover{ color: var(--brand-1); }
 .gi-list{ list-style:none; padding:0; margin:0; display:grid; gap:10px; }
-.gi-footer__bottom{ border-top:1px solid var(--card-border); color: var(--text-muted); font-size:14px; text-align:center; padding:14px 0; }
+.gi-footer__bottom{ border-top:1px solid #334155; color: var(--text-muted); font-size:14px; text-align:center; padding: 24px 0; }
 
 /* ====== Journey Timeline ====== */
 .gi-journey{ position:relative; }
@@ -203,5 +203,31 @@ html { scroll-behavior: smooth; }
   }
   .gi-product-item:nth-child(even) .gi-product-item__img {
     order: 0;
+  }
+}
+
+/* ====== Scroller ====== */
+.gi-scroller {
+  max-width: 100%;
+  overflow: hidden;
+  -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
+.gi-scroller__inner {
+  display: flex;
+  gap: 1.5rem;
+  width: max-content;
+  animation: scroll 40s linear infinite;
+}
+.gi-scroller:hover .gi-scroller__inner {
+  animation-play-state: paused;
+}
+.gi-scroller__inner .gi-review-card {
+  width: 380px; /* Give cards a fixed width for consistent scrolling */
+}
+
+@keyframes scroll {
+  to {
+    transform: translate(calc(-50% - 0.75rem)); /* 50% for half the container, 0.75rem for half the gap */
   }
 }
