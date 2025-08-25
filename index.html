@@ -49,58 +49,13 @@
 <section id="services" class="gi-section reveal pt-0">
   <div class="gi-container">
     <h3 class="gi-chip gi-chip--sa gi-underline">Our Products</h3>
-    <div class="swiper gi-product-slider">
+    <div class="swiper gi-sa-slider">
       <div class="swiper-wrapper">
-        <!-- Slide 1 -->
-        <div class="swiper-slide">
-          <div class="gi-product-grid">
-            <div class="gi-product-item">
-              <img src="http://goodwayinternational.com/wp-content/uploads/2025/08/Untitled-design-34-2.png" alt="Saudi Dates 1" class="gi-product-item__img">
-              <div class="gi-product-item__text">
-                <h4>Product Name 1</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              </div>
-            </div>
-            <div class="gi-product-item">
-              <div class="gi-product-item__text">
-                <h4>Product Name 2</h4>
-                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-              </div>
-              <img src="http://goodwayinternational.com/wp-content/uploads/2025/08/Untitled-design-35-2.png" alt="Saudi Dates 2" class="gi-product-item__img">
-            </div>
-          </div>
-        </div>
-        <!-- Slide 2 -->
-        <div class="swiper-slide">
-          <div class="gi-product-grid">
-            <div class="gi-product-item">
-              <img src="http://goodwayinternational.com/wp-content/uploads/2025/08/Untitled-design-36-2.png" alt="Saudi Dates 3" class="gi-product-item__img">
-              <div class="gi-product-item__text">
-                <h4>Product Name 3</h4>
-                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-              </div>
-            </div>
-            <div class="gi-product-item">
-              <div class="gi-product-item__text">
-                <h4>Product Name 4</h4>
-                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              </div>
-              <img src="http://goodwayinternational.com/wp-content/uploads/2025/08/Untitled-design-37-1.png" alt="Saudi Dates 4" class="gi-product-item__img">
-            </div>
-          </div>
-        </div>
-        <!-- Slide 3 -->
-        <div class="swiper-slide">
-          <div class="gi-product-grid gi-product-grid--single">
-            <div class="gi-product-item">
-              <img src="http://goodwayinternational.com/wp-content/uploads/2025/08/ChatGPT-Image-Aug-23-2025-05_49_34-PM-2.png" alt="Saudi Dates 5" class="gi-product-item__img">
-              <div class="gi-product-item__text">
-                <h4>Product Name 5</h4>
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div class="swiper-slide"><img src="http://goodwayinternational.com/wp-content/uploads/2025/08/Untitled-design-34-2.png" alt="Saudi Dates 1"></div>
+        <div class="swiper-slide"><img src="http://goodwayinternational.com/wp-content/uploads/2025/08/Untitled-design-35-2.png" alt="Saudi Dates 2"></div>
+        <div class="swiper-slide"><img src="http://goodwayinternational.com/wp-content/uploads/2025/08/Untitled-design-36-2.png" alt="Saudi Dates 3"></div>
+        <div class="swiper-slide"><img src="http://goodwayinternational.com/wp-content/uploads/2025/08/Untitled-design-37-1.png" alt="Saudi Dates 4"></div>
+        <div class="swiper-slide"><img src="http://goodwayinternational.com/wp-content/uploads/2025/08/ChatGPT-Image-Aug-23-2025-05_49_34-PM-2.png" alt="Saudi Dates 5"></div>
       </div>
       <div class="swiper-pagination"></div>
       <div class="swiper-button-prev"></div>
@@ -300,14 +255,19 @@
 <script>
 (function(){
   if (!window.Swiper) return;
-  new Swiper('.gi-product-slider', {
+  new Swiper('.gi-sa-slider', {
     loop: true,
-    autoplay: { delay: 4000, disableOnInteraction: false },
-    speed: 600,
-    spaceBetween: 30,
+    autoplay: { delay: 3000, disableOnInteraction: false },
+    speed: 500,
+    spaceBetween: 24,
     slidesPerView: 1,
     pagination: { el: '.swiper-pagination', clickable: true },
     navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+    breakpoints: {
+      900: {
+        slidesPerView: 2
+      }
+    }
   });
 })();
 </script>

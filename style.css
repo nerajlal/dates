@@ -175,50 +175,6 @@ html { scroll-behavior: smooth; }
 .pb-0 { padding-bottom: 0 !important; }
 .pt-0 { padding-top: 0 !important; }
 
-/* ====== Product Slider ====== */
-.gi-product-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  align-items: center;
-}
-.gi-product-grid--single {
-  max-width: 80%;
-  margin: auto;
-}
-.gi-product-item {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-}
-.gi-product-item__img {
-  width: 50%;
-  flex-shrink: 0;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow-lg);
-}
-.gi-product-item__text {
-  text-align: left;
-}
-.gi-product-item__text h4 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-  color: var(--text-main);
-}
-.gi-product-item__text p {
-  color: var(--text-muted);
-}
-.gi-product-item:nth-child(even) .gi-product-item__img {
-  order: 2;
-}
-.gi-product-slider .swiper-button-next,
-.gi-product-slider .swiper-button-prev {
-  color: var(--brand-1);
-}
-.gi-product-slider .swiper-pagination-bullet-active {
-  background: var(--brand-1);
-}
-
 /* ====== Review Cards ====== */
 .gi-review-card {
   background: var(--bg-main);
