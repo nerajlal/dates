@@ -2,6 +2,7 @@
 :root{
   --bg-main: #ffffff;
   --bg-alt: #f8fafc;
+  --bg-cream: #fdfbf7;
   --text-main: #1e293b;
   --text-muted: #64748b;
   --brand-1: #4f46e5;
@@ -35,7 +36,7 @@ html { scroll-behavior: smooth; }
 .gi-section{ position:relative; padding: clamp(48px,6vw,90px) 0; }
 .gi-container{ width:min(1200px,92%); margin:0 auto; }
 .gi-section.bg-alt { background-color: var(--bg-alt); }
-.gi-section.bg-subtle { background-color: #f1f5f9; }
+.gi-section.bg-cream { background-color: var(--bg-cream); }
 .gi-surface{
   background: var(--bg-main);
   border: 1px solid var(--card-border);
@@ -181,27 +182,38 @@ html { scroll-behavior: smooth; }
   .gi-journey__dot{ left:16px; }
 }
 
-/* ====== Feature Cards ====== */
-.gi-feature-card {
-  text-align: center;
-  padding: 1.5rem;
-  background: linear-gradient(145deg, #ffffff, #f9fafb);
-  border-radius: var(--radius);
-  border: 1px solid var(--card-border);
-  box-shadow: var(--shadow);
-  transition: transform .3s ease, box-shadow .3s ease;
+/* ====== Feature Section ====== */
+.gi-feature-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
 }
-.gi-feature-card:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-lg);
+.gi-feature-image {
+    width: 100%;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-lg);
 }
-.gi-feature-card__icon {
-  color: var(--brand-1);
-  margin-bottom: 1rem;
+.gi-feature-content .gi-underline {
+    margin-bottom: 1.5rem;
 }
-.gi-feature-card__title {
-  font-size: 1.125rem;
-  margin-bottom: 0.5rem;
+.gi-feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 1rem;
+}
+.gi-feature-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.1rem;
+    color: var(--text-main);
+}
+.gi-feature-list svg {
+    color: var(--brand-1);
+    flex-shrink: 0;
 }
 
 /* ====== Utility Classes ====== */
@@ -235,11 +247,8 @@ html { scroll-behavior: smooth; }
 }
 
 @media(max-width:768px) {
-  .gi-product-grid {
+  .gi-feature-grid {
     grid-template-columns: 1fr;
-  }
-  .gi-product-item:nth-child(even) .gi-product-item__img {
-    order: 0;
   }
 }
 
