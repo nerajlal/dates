@@ -182,38 +182,28 @@ html { scroll-behavior: smooth; }
   .gi-journey__dot{ left:16px; }
 }
 
-/* ====== Feature Section ====== */
-.gi-feature-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    align-items: center;
+/* ====== Feature Cards ====== */
+.gi-feature-card {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: var(--bg-main);
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke-width='2' stroke='%23f1f5f9'%3e%3cpath d='M0 8h32M0 16h32M0 24h32'/%3e%3c/svg%3e");
+  border-radius: var(--radius);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--shadow);
+  transition: transform .3s ease, box-shadow .3s ease;
 }
-.gi-feature-image {
-    width: 100%;
-    border-radius: var(--radius);
-    box-shadow: var(--shadow-lg);
+.gi-feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
 }
-.gi-feature-content .gi-underline {
-    margin-bottom: 1.5rem;
+.gi-feature-card__icon {
+  color: var(--brand-1);
+  margin-bottom: 1rem;
 }
-.gi-feature-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: grid;
-    gap: 1rem;
-}
-.gi-feature-list li {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    font-size: 1.1rem;
-    color: var(--text-main);
-}
-.gi-feature-list svg {
-    color: var(--brand-1);
-    flex-shrink: 0;
+.gi-feature-card__title {
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
 }
 
 /* ====== Utility Classes ====== */
@@ -244,6 +234,15 @@ html { scroll-behavior: smooth; }
 .gi-review-card cite {
   font-weight: 600;
   color: var(--text-main);
+}
+
+.gi-footer .gi-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.gi-footer .gi-list .fa {
+    width: 14px; /* Align text nicely */
 }
 
 @media(max-width:768px) {
