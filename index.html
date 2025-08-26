@@ -27,6 +27,7 @@
         <div class="mm-header-actions">
             <a href="#" class="mm-button mm-button-secondary">Login</a>
         </div>
+        <button class="mm-mobile-menu-button"><i class="fa fa-bars"></i></button>
     </div>
 </header>
 
@@ -275,7 +276,17 @@
 
 <script>
 (function(){
+  // Dynamic year
   var y=document.getElementById('mm-year'); if(y){ y.textContent=new Date().getFullYear(); }
+
+  // Mobile menu
+  var btn = document.querySelector('.mm-mobile-menu-button');
+  var nav = document.querySelector('.mm-nav');
+  if(btn && nav){
+    btn.addEventListener('click', function(){
+      nav.classList.toggle('mm-nav--open');
+    });
+  }
 })();
 </script>
 </body>

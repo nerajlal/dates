@@ -3,7 +3,7 @@
     --primary-color: #c5a47e; /* Gold */
     --secondary-color: #4a2c2a; /* Dark Brown */
     --background-color: #ffffff;
-    --light-background-color: #f7f5f2; /* Cream */
+    --light-background-color: #ffffff; /* Cream */
     --text-color: #333333;
     --text-light: #ffffff;
     --footer-background: #1e1e1e;
@@ -269,6 +269,14 @@ body {
 }
 
 /* ====== Responsive ====== */
+.mm-mobile-menu-button {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
 @media (max-width: 992px) {
     .mm-grid-3, .mm-grid-4, .mm-footer-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -279,7 +287,24 @@ body {
 }
 @media (max-width: 768px) {
     .mm-nav {
-        display: none; /* Simple responsive for now */
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--background-color);
+        box-shadow: var(--shadow);
+    }
+    .mm-nav.mm-nav--open {
+        display: flex;
+    }
+    .mm-nav a {
+        padding: 1rem;
+        border-bottom: 1px solid #eee;
+    }
+    .mm-mobile-menu-button {
+        display: block;
     }
     .mm-hero-content h1 {
         font-size: 2.5rem;
