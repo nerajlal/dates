@@ -80,7 +80,7 @@ body {
 
 /* ====== Hero Section ====== */
 .mm-hero {
-    background: url('https://majesticmedjool.in/wp-content/uploads/2025/08/ChatGPT_Image_May_26__2025__04_24_24_PM-removebg-preview.png') no-repeat center center/cover;
+    background: url('https://goodwayinternational.com/wp-content/uploads/2025/08/juicy-exotic.jpg') no-repeat center center/cover;
     height: 80vh;
     display: flex;
     align-items: center;
@@ -168,6 +168,15 @@ body {
 }
 .mm-benefit-card:hover, .mm-product-card:hover, .mm-testimonial-card:hover {
     transform: translateY(-10px);
+}
+.mm-benefit-card .fa {
+    font-size: 40px;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+.mm-stars {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
 }
 .mm-benefit-card img {
     height: 80px;
