@@ -332,24 +332,21 @@ html { scroll-behavior: smooth; }
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  width: 90vw; /* Make item responsive */
-  max-width: 800px; /* Add a max-width to prevent it from becoming too large */
-  padding: 1.5rem;
+  width: 500px; /* Give items a fixed width for consistent scrolling */
+  padding: 1.5rem; /* Increased padding */
   background: var(--bg-main);
   border: 1px solid var(--card-border);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
 }
 .gi-product-item__img {
-  width: 45%; /* 45% of the 90vw container */
-  height: auto;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
+  width: 45%;
+  height: 150px; /* Give a fixed height */
+  object-fit: cover; /* Ensure image covers the area */
   flex-shrink: 0;
   border-radius: var(--radius);
 }
 .gi-product-item__text {
-  flex-basis: 50%;
   flex-grow: 1;
 }
 .gi-product-item__text h4 {
