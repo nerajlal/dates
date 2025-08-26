@@ -113,13 +113,13 @@ html { scroll-behavior: smooth; }
     justify-content: center;
     width: 40px;
     height: 40px;
-    background: #2d3748;
-    color: #fff;
+    background: #334155; /* Slightly lighter than footer bg */
+    color: var(--bg-alt);
     border-radius: 50%;
     transition: all .3s ease;
 }
 .gi-footer .gi-socials a:hover {
-    background: var(--brand-1);
+    background: var(--brand-2); /* Use secondary brand color on hover */
     transform: translateY(-4px);
     color: #fff;
 }
@@ -178,38 +178,43 @@ html { scroll-behavior: smooth; }
 
 /* ====== Footer ====== */
 .gi-footer {
-    background: #111; /* Darker background */
-    border-top: 4px solid var(--brand-1); /* Accent border */
-    color: #a0aec0; /* Lighter text color */
+    background: var(--text-main);
+    color: var(--bg-alt);
 }
 .gi-footer__top {
-    padding: clamp(60px, 8vw, 120px) 24px; /* More padding */
+    padding: clamp(60px, 8vw, 100px) 24px;
 }
 .gi-footer h4 {
-    color: #fff; /* White headings */
-    margin: 0 0 1rem;
-    font-size: 1.125rem;
+    color: #fff;
+    margin: 0 0 1.5rem;
+    font-size: 1.25rem;
+    text-align: left; /* Align footer headings left */
+}
+/* Make footer underline centered */
+.gi-footer .gi-underline::after {
+    left: 0;
+    transform: none;
 }
 .gi-footer p, .gi-footer a, .gi-footer li {
-    color: #a0aec0; /* Lighter text for all elements */
+    color: var(--text-muted);
 }
 .gi-footer a:hover {
-    color: #fff; /* White on hover */
+    color: var(--brand-1);
 }
 .gi-list {
     list-style: none;
     padding: 0;
     margin: 0;
     display: grid;
-    gap: 12px; /* Slightly more gap */
+    gap: 12px;
 }
 .gi-footer__bottom {
-    background: #000; /* Black bottom bar */
-    color: #718096; /* Muted text color */
+    background: transparent;
+    color: var(--text-muted);
     font-size: 14px;
     text-align: center;
-    padding: 24px 0;
-    border-top: 1px solid #2d3748; /* Darker border */
+    padding: 30px 0 30px;
+    border-top: 1px solid #334155;
 }
 
 /* ====== Journey Timeline ====== */
