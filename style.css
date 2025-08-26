@@ -95,11 +95,33 @@ html { scroll-behavior: smooth; }
     padding: 0;
     margin-top: 1rem;
 }
+/* This is a general rule, so we will keep it but override for footer */
 .gi-socials a {
     color: var(--text-muted);
 }
 .gi-socials a:hover {
     color: var(--bg-main);
+}
+
+/* Footer-specific social icons */
+.gi-footer .gi-socials {
+    margin-top: 1.5rem;
+}
+.gi-footer .gi-socials a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #2d3748;
+    color: #fff;
+    border-radius: 50%;
+    transition: all .3s ease;
+}
+.gi-footer .gi-socials a:hover {
+    background: var(--brand-1);
+    transform: translateY(-4px);
+    color: #fff;
 }
 
 .gi-card{
@@ -155,13 +177,40 @@ html { scroll-behavior: smooth; }
 }
 
 /* ====== Footer ====== */
-.gi-footer{ background: var(--text-main); border-top:1px solid var(--card-border); color: var(--bg-alt); }
-.gi-footer__top{ padding: clamp(48px,6vw,90px) 24px; }
-.gi-footer h4{ color: var(--bg-main); margin:0 0 10px; font-size:18px; }
-.gi-footer p, .gi-footer a, .gi-footer li{ color: var(--text-muted); }
-.gi-footer a:hover{ color: var(--brand-1); }
-.gi-list{ list-style:none; padding:0; margin:0; display:grid; gap:10px; }
-.gi-footer__bottom{ border-top:1px solid #334155; color: var(--text-muted); font-size:14px; text-align:center; padding: 24px 0; }
+.gi-footer {
+    background: #111; /* Darker background */
+    border-top: 4px solid var(--brand-1); /* Accent border */
+    color: #a0aec0; /* Lighter text color */
+}
+.gi-footer__top {
+    padding: clamp(60px, 8vw, 120px) 24px; /* More padding */
+}
+.gi-footer h4 {
+    color: #fff; /* White headings */
+    margin: 0 0 1rem;
+    font-size: 1.125rem;
+}
+.gi-footer p, .gi-footer a, .gi-footer li {
+    color: #a0aec0; /* Lighter text for all elements */
+}
+.gi-footer a:hover {
+    color: #fff; /* White on hover */
+}
+.gi-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 12px; /* Slightly more gap */
+}
+.gi-footer__bottom {
+    background: #000; /* Black bottom bar */
+    color: #718096; /* Muted text color */
+    font-size: 14px;
+    text-align: center;
+    padding: 24px 0;
+    border-top: 1px solid #2d3748; /* Darker border */
+}
 
 /* ====== Journey Timeline ====== */
 .gi-journey{ position:relative; }
@@ -283,21 +332,24 @@ html { scroll-behavior: smooth; }
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  width: 500px; /* Give items a fixed width for consistent scrolling */
-  padding: 1.5rem; /* Increased padding */
+  width: 90vw; /* Make item responsive */
+  max-width: 800px; /* Add a max-width to prevent it from becoming too large */
+  padding: 1.5rem;
   background: var(--bg-main);
   border: 1px solid var(--card-border);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
 }
 .gi-product-item__img {
-  width: 45%;
-  height: 150px; /* Give a fixed height */
-  object-fit: cover; /* Ensure image covers the area */
+  width: 45%; /* 45% of the 90vw container */
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
   flex-shrink: 0;
   border-radius: var(--radius);
 }
 .gi-product-item__text {
+  flex-basis: 50%;
   flex-grow: 1;
 }
 .gi-product-item__text h4 {
@@ -310,6 +362,7 @@ html { scroll-behavior: smooth; }
 }
 .gi-scroller--alt .gi-scroller__inner {
   animation-duration: 60s;
+  animation-direction: reverse;
 }
 
 
