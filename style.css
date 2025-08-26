@@ -69,8 +69,6 @@ html { scroll-behavior: smooth; }
 .gi-grid-2{ grid-template-columns: repeat(2,minmax(0,1fr)); }
 .gi-grid-1{ grid-template-columns: 1fr; }
 
-.gi-footer-col--span-2 { grid-column: span 2 / span 2; }
-
 @media(max-width:1024px){ .gi-grid-4{ grid-template-columns:repeat(2,1fr)} .gi-grid-3{ grid-template-columns:repeat(2,1fr)} }
 @media(max-width:768px){ .gi-footer .gi-grid-4 {grid-template-columns: repeat(2,1fr);}}
 @media(max-width:640px){ .gi-grid-4, .gi-grid-3, .gi-grid-2, .gi-grid-1{ grid-template-columns:1fr } .gi-footer .gi-grid-4 {grid-template-columns: 1fr;}}
